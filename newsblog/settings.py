@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap_admin', # always before django.contrib.admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,7 +67,7 @@ TEMPLATES = [
         },
     },
 ]
-
+BOOTSTRAP_ADMIN_SIDEBAR_MENU = True
 WSGI_APPLICATION = 'newsblog.wsgi.application'
 
 
