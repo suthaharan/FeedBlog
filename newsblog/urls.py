@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from newsblog import views as newsblog_views
 
 urlpatterns = [
+    url(r'^$', newsblog_views.index, name='index'),
     url(r'^admin/', admin.site.urls),
 ]
