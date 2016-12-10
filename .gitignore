@@ -1,1 +1,13 @@
-*.pyc
+.DS_Store
+*.egg-info
+*.pot
+*.py[co]
+__pycache__
+
+# dotenv
+.env
+
+# virtualenv
+.venv/
+venv/
+ENV/
