@@ -1,5 +1,8 @@
 from __future__ import unicode_literals
 from django.db import models
+from ckeditor.fields import RichTextField
+
+
 
 # QuerySet with Custom Managers for filtering everything that is published
 class EntryQuerySet(models.QuerySet):
@@ -9,7 +12,8 @@ class EntryQuerySet(models.QuerySet):
 # Create your models here.
 class Entry(models.Model):
 	title = models.CharField(max_length=200)
-	body = models.TextField()
+	body = RichTextField('body')
+	#models.TextField()
 	slug = models.SlugField(max_length=200, unique=True)
 	publish = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True)
